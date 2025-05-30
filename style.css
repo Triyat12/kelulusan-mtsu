@@ -1,0 +1,89 @@
+/* Style dari website kelulusan */
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+}
+.login-container, .kelulusan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #005fcb;
+}
+.error {
+  color: #ff4d4d;
+  margin-top: 10px;
+}
+.kelulusan-container {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.kelulusan-container > * {
+  position: relative;
+  z-index: 2;
+}
+.anim-text {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+.anim-text:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.anim-text:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.tagihan-container {
+  margin-top: 20px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 300px;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
